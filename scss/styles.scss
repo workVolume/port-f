@@ -1,0 +1,234 @@
+@import 'normalize';
+@import 'mixins';
+// @import 'slick';
+
+
+
+*{
+	box-sizing: border-box;}
+html{
+	font-size: 10px;
+	height: 100%;
+}
+body{
+	// font-family:
+	font-size: 1.8rem;
+	line-height: 1.6;
+	color:#ffffff;
+	min-height: 100%;
+	.container-fluid{
+		margin: 0 6%;
+		width: 88%;
+		padding: 0;
+
+	}
+}
+main{
+	background-color:#green;
+	width: 100%;
+	height: 100vh;
+	.nav{
+		height: 10vh;
+		width: 88%;
+		margin: 0 auto;
+		display: flex;
+         align-items: center;
+         justify-content: space-between;
+		&__burger{
+			position: relative;
+			display: block;
+			height: 50px;
+			width: 50px;
+			background-color: #362f2f;
+			margin: 8px;
+
+		}
+		&__line{
+			width: 50%;
+			height: 4px;
+			background-color: #fff;
+			 @include my_pos( 50%,50%);
+			&::before,
+			&::after{
+				content:'';
+				width: 100%;
+			    height: 4px;
+			    display: block;
+			    background-color: #fff;
+			    margin: 0 auto;
+
+			}
+			&::before{
+              transform: translateY(250%);
+			}
+			&::after{
+              transform: translateY(-350%);
+			}
+		}
+		&__bar{
+			display: none;
+
+		}
+		&__socials{
+			list-style: none;
+			padding-left: 0;
+			display: flex;
+			width: 30%;
+			justify-content: space-around;
+
+
+		}
+		&__social{
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			fill:#362f2f;
+			stroke:inherit;
+			 transition: fill 0.3s;
+			&:hover{
+				stroke: #000;
+				 fill:purple;
+			}
+
+		}
+	}
+	.about{
+		height: 90vh;
+        &__foto{
+        	& img{
+        		width: 100%;
+        		height: auto;
+        	}
+        } 
+        &__text{
+        	& p{
+        		font-size: 1.6rem;
+        		text-align: justify;
+        	}
+
+        } 
+        &__title{
+        	text-transform: uppercase;
+        	font-size: 2.4rem;
+        }
+
+		
+	}
+	.timeline{
+        height: 70vh;
+        &__title{
+        	padding:0 30px;
+        	& span{
+        	display: flex;
+             justify-content: space-around;
+             align-items: center;
+             text-transform: uppercase;
+        	height: 30%;
+             font-size: 1.8rem;
+             color:#fff;
+        	background-color: #362f2f;
+             margin: 0;
+             padding:0;
+        	}
+        }
+        &__data{
+        	& h2{
+        		color:#c88f00;
+        	}
+        	& p{
+        		font-size: 1.6rem;
+        		border-top:1px solid #c88f00;
+        		padding: 10px 0;
+        	&:nth-child(2) {
+        		border: none;
+        		padding-top: 0px;
+        	}
+        	}
+        }
+	}
+	.client{
+		position: relative;
+		height: 70vh;
+		 &__title{
+        	padding:0 30px;
+        	& span{
+        	display: flex;
+             justify-content: space-around;
+             align-items: center;
+             text-transform: uppercase;
+        	height: 40%;
+             font-size: 1.8rem;
+             color:#fff;
+        	background-color: #c3a000;
+             margin: 0;
+             padding:0;
+        	}
+        }
+        &__list{
+        	list-style:none;
+        	padding-left: 0; 
+        	font-size: 1.6rem;
+        }
+        &__speech{
+        	font-size: 2rem;
+        	text-align: center;
+        	margin-top: 15%;
+        	text-align: center;
+        	// &::before{
+        	// 	outline: 1px red solid;
+        	// 	// content:' ';
+        	// 	display: block;
+        	// 	// z-index:1;
+        	// 	content:url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="19px" height="19px"><text font-family="RobotoCondensed" fill="#000" font-size="72px" x="0px" y="9.85500000000002px">&#8220;</text></svg>");
+       		// // background-image: url('../img/quot.svg');
+        	// 	background-size:100%, 100%;
+        	// 	background-color:000;
+        	// 	color:#000;
+         // 	height:50px;
+         // 	width:50px;
+         // 	@include my_pos(-10%,50%);
+        	// }
+        }
+        // &__pict{
+        // 		outline: 1px red solid;
+        // 		display: block;
+        //  	height:50px;
+        //  	width:50px;
+        //  	@include my_pos(-10%,50%);
+        // }
+        &__logos{
+        	list-style:none;
+        	padding-left: 0;
+        	display: inline-flex;
+        	justify-content: space-around;
+        	width: 100%;
+        	height: 10vh;
+            align-items: center;
+
+        }
+        &__logo{
+        	padding-left: 0;
+        	display: inline-block;
+        	align-content: center;
+        	width: 12%;
+            height: auto;
+        	& img{
+        		// display: block;
+        		// height: 100%;
+        		// width: 100%;
+        	}
+        }
+	}
+	.base{
+		height: 5vh;
+		text-align: center;
+		font-size: 1.2rem;
+		& span{
+			padding: 20px 0;
+			display: block;
+			// width: 80px;
+		}
+	}
+
+}
+

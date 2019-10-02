@@ -42,6 +42,7 @@ main{
 			background-color: #362f2f;
 			margin: 8px;
 
+
 		}
 		&__line{
 			width: 50%;
@@ -64,6 +65,18 @@ main{
 			&::after{
               transform: translateY(-350%);
 			}
+			#check_menu{
+				display: none;
+			}
+			#check_menu:checked ~ &__line{
+				height:0;
+				&::before{
+                 transform:rotate(45deg);                 
+				}
+				&::after{
+                 transform:rotate(-45deg);
+				}
+			}
 		}
 		&__bar{
 			display: none;
@@ -82,13 +95,17 @@ main{
 			display: inline-block;
 			width: 40px;
 			height: 40px;
-			fill:#362f2f;
-			stroke:inherit;
 			 transition: fill 0.3s;
+			 & a{
+			fill:#362f2f;
+			// stroke:yellow;
+			 	// color:none;
+			 	text-decoration: none;
 			&:hover{
 				stroke: #000;
 				 fill:purple;
-			}
+			   }
+			 }
 
 		}
 	}
@@ -174,6 +191,9 @@ main{
         	text-align: center;
         	margin-top: 15%;
         	text-align: center;
+        	& span{
+        		font-weight: bold;
+        	}
         	// &::before{
         	// 	outline: 1px red solid;
         	// 	// content:' ';

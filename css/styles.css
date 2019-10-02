@@ -377,6 +377,20 @@ main {
         -ms-transform: translateY(-350%);
         -o-transform: translateY(-350%);
         transform: translateY(-350%); }
+      main .nav__line #check_menu {
+        display: none; }
+      #check_menu:checked ~ main .nav__line__line {
+        height: 0; }
+        #check_menu:checked ~ main .nav__line__line::before {
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        #check_menu:checked ~ main .nav__line__line::after {
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
     main .nav__bar {
       display: none; }
     main .nav__socials {
@@ -392,14 +406,15 @@ main {
       display: inline-block;
       width: 40px;
       height: 40px;
-      fill: #362f2f;
-      stroke: inherit;
       -webkit-transition: fill 0.3s;
       -o-transition: fill 0.3s;
       transition: fill 0.3s; }
-      main .nav__social:hover {
-        stroke: #000;
-        fill: purple; }
+      main .nav__social a {
+        fill: #362f2f;
+        text-decoration: none; }
+        main .nav__social a:hover {
+          stroke: #000;
+          fill: purple; }
   main .about {
     height: 90vh; }
     main .about__foto img {
@@ -470,6 +485,8 @@ main {
       text-align: center;
       margin-top: 15%;
       text-align: center; }
+      main .client__speech span {
+        font-weight: bold; }
     main .client__logos {
       list-style: none;
       padding-left: 0;

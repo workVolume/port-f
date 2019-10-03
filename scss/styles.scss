@@ -194,20 +194,6 @@ main{
         	& span{
         		font-weight: bold;
         	}
-        	// &::before{
-        	// 	outline: 1px red solid;
-        	// 	// content:' ';
-        	// 	display: block;
-        	// 	// z-index:1;
-        	// 	content:url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="19px" height="19px"><text font-family="RobotoCondensed" fill="#000" font-size="72px" x="0px" y="9.85500000000002px">&#8220;</text></svg>");
-       		// // background-image: url('../img/quot.svg');
-        	// 	background-size:100%, 100%;
-        	// 	background-color:000;
-        	// 	color:#000;
-         // 	height:50px;
-         // 	width:50px;
-         // 	@include my_pos(-10%,50%);
-        	// }
         }
         // &__pict{
         // 		outline: 1px red solid;
@@ -238,6 +224,69 @@ main{
         		// width: 100%;
         	}
         }
+	}
+	// .persons__wraper{
+	// 		// height: 110vh;
+	// 		&:nth-child(2n){
+	// 			background-color: #000000;
+	// 		}
+	// 	}
+	.persons{
+		// width: 100%;
+		height: auto;
+		&__person:nth-child(even){
+			background-color: #000;		
+		}		
+		&__person:nth-child(odd) {
+			background-color: #362f2f;		
+		}
+		&__person{
+			margin-bottom:20px ;
+
+			color: #fff;
+		}
+		&__inner{
+			outline: 1px red solid;
+			height: auto;
+			width:auto;
+		}
+		&__foto{
+
+			height: 52vh;
+			overflow: hidden;
+             display: block;
+			& img{
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+		}
+		&__data{
+
+			height: 52vh;
+			display: block;
+		}
+		&__title{
+			text-transform: uppercase;
+				font-size: 2.4rem;
+				padding: 0;
+				margin: 0;
+		}
+		&__text{
+				font-size: 1.8rem;
+				padding: 0;
+				margin: 0;
+		}
+		&__btn{
+			border-radius: 0;
+			display: block;
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			color: #fff;
+			width: 40%;
+			margin: 0 auto;
+		}
 	}
 	.base{
 		height: 5vh;

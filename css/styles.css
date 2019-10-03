@@ -507,6 +507,47 @@ main {
       align-content: center;
       width: 12%;
       height: auto; }
+  main .persons {
+    height: auto; }
+    main .persons__person:nth-child(even) {
+      background-color: #000; }
+    main .persons__person:nth-child(odd) {
+      background-color: #362f2f; }
+    main .persons__person {
+      margin-bottom: 20px;
+      color: #fff; }
+    main .persons__inner {
+      outline: 1px red solid;
+      height: auto;
+      width: auto; }
+    main .persons__foto {
+      height: 52vh;
+      overflow: hidden;
+      display: block; }
+      main .persons__foto img {
+        width: 100%;
+        height: auto;
+        display: block; }
+    main .persons__data {
+      height: 52vh;
+      display: block; }
+    main .persons__title {
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      padding: 0;
+      margin: 0; }
+    main .persons__text {
+      font-size: 1.8rem;
+      padding: 0;
+      margin: 0; }
+    main .persons__btn {
+      border-radius: 0;
+      display: block;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: #fff;
+      width: 40%;
+      margin: 0 auto; }
   main .base {
     height: 5vh;
     text-align: center;

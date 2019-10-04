@@ -509,12 +509,13 @@ main {
       height: auto; }
   main .persons {
     height: auto; }
-    main .persons__person:nth-child(even) {
+    main .persons__person:nth-child(even) div:first-child {
       background-color: #000; }
-    main .persons__person:nth-child(odd) {
+    main .persons__person:nth-child(odd) div:first-child {
       background-color: #362f2f; }
     main .persons__person {
       margin-bottom: 20px;
+      margin-top: 20px;
       color: #fff; }
     main .persons__inner {
       outline: 1px red solid;
@@ -530,16 +531,21 @@ main {
         display: block; }
     main .persons__data {
       height: 52vh;
-      display: block; }
+      display: block;
+      padding: 0 20px; }
     main .persons__title {
       text-transform: uppercase;
       font-size: 2.4rem;
-      padding: 0;
-      margin: 0; }
+      height: 10vh;
+      overflow: hidden;
+      white-space-collapse: wrap;
+      margin-bottom: 2rem; }
     main .persons__text {
       font-size: 1.8rem;
-      padding: 0;
-      margin: 0; }
+      height: 20vh;
+      margin-bottom: 20px;
+      overflow: hidden;
+      white-space-collapse: wrap; }
     main .persons__btn {
       border-radius: 0;
       display: block;
